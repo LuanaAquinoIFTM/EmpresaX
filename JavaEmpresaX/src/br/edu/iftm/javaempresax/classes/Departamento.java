@@ -9,8 +9,6 @@ public class Departamento {
     private int codGerente;
     private Date dataGerente;
 
-    public Departamento() {
-    }
 
     public Departamento(int codigo, String nome, int codGerente, Date dataGerente) {
         this.codigo = codigo;

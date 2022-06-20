@@ -14,8 +14,6 @@ public class Empregado {
     private int codDepto;
     private Departamento departamento;
 
-    public Empregado() {
-    }
 
     public Empregado(int codigo, String nome, Date datanasc,
                      String endereco, char sexo, double salario,
