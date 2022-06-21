@@ -42,17 +42,20 @@ public class Principal {
             System.out.println("4 - Imprimir Todos os Empregados");
             System.out.println("5 - Cadastrar Departamentos");
             System.out.println("6 - Imprimir Todos os Departamentos");
+            System.out.println("7 - Buscar projeto por objeto");
             System.out.println("0 - Sair");
             System.out.println("Digite uma opcao: ");
             opcao = teclado.nextInt();
+
 
             switch (opcao) {
                 case 1:
                     if (contadorProjeto < 5) {
                         System.out.println("Digite o codigo do Projeto: ");
                         int codigo = teclado.nextInt();
+                        teclado.nextLine();
                         System.out.println("Digite o nome do Projeto: ");
-                        String nome = teclado.next();
+                        String nome = teclado.nextLine();
                         Projeto p = new Projeto(codigo, nome, null);
                         vetorDeProjetos[contadorProjeto] = p;
                         //vetorDeProjetos[countProjetos] = new Projeto(codigo,nome,null);
@@ -129,20 +132,21 @@ public class Principal {
                     }
                 case 7:
                     System.out.println("Digite o código do projeto");
+                    boolean temProjeto = false;
                     int cod = teclado.nextInt();
-                    for (Projeto Pr: vetorDeProjetos) {
+                    for (Projeto Pr : vetorDeProjetos) {
                         if (Pr != null) {
                             if (Pr.getCodigo() == cod) {
                                 System.out.println(Pr);
+                                temProjeto = true;
                             }
                         }
                     }
-
-
             }
-        } while (opcao != 0);
 
 
-    }
 
+        }while (opcao != 0) ;
+
+        }
     }
